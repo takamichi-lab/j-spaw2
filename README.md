@@ -22,7 +22,7 @@ J-SpAW2 (ジェイ・スポウ2) コーパスは，話者照合となりすま�
     - `metadata_LA.txt`：LAタスク用のなりすまし音声のメタデータ
     - `metadata_PA.txt`：PAタスク用のなりすまし音声のメタデータ(実発話：800ファイル, なりすまし音声：32,000ファイル)
     - `config.py`：ASVspoof2021のeval-packageを本データベースに適用させるためのconfigファイル
-    - `README_protocols`：https://github.com/takamichi-lab/j-spaw2/protocols/README_protocols.md
+    - `README_protocols`：https://github.com/takamichi-lab/j-spaw2/protocols/README.md
 
 
 ## メタデータ
