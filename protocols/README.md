@@ -16,7 +16,7 @@
   ※ASV_PA_eval.txt，PA_eval.txt，metadata_PA.txtは音量大・近距離（p1_v1）の環境になっているため，p1とv1を変更しながら使用してください
 
 ## ファイル内容
-metadata_LA.txt, metadata_PA.txt は ASVspoof2021 におけるメタデータの書き方を参考にしています．これらを利用することで, ASVspoof2021 の eval-packageのmain.pyで EER (equal error rate)とt-DCF (tandem detection cost function)の評価を実施できます．その際, J-SpAW の各環境ごとに EER, t-DCF の評価を行いたい場合は ASVspoof2021 eval-package の config.py を, 本パッケージに含まれている protocols/config.py と差し替えてください．また，ASV(話者照合)とCM(なりすまし音声検出)を連結した結果，CMを突破した音声のみで話者照合をした結果であるt-DCF (tandem detection cost function)はASVspoof2019のevaluate_tDCF_asvspoof19.pyを変更しながら使用して評価を実施しました．メタデータで使われている各記号の意味やファイルの詳細はJ-SPAW2/README.mdに記載されています．
+metadata_LA.txt, metadata_PA.txt は ASVspoof2021 におけるメタデータの書き方を参考にしています．これらを利用することで, ASVspoof2021 の eval-packageのmain.pyで EER (equal error rate)とt-DCF (tandem detection cost function)の評価を実施できます．その際, J-SpAW の各環境ごとに EER, t-DCF の評価を行いたい場合は ASVspoof2021 eval-package の config.py を, 本パッケージに含まれている protocols/config.pyと差し替えてください．また，ASV(話者照合)とCM(なりすまし音声検出)を連結した結果，CMを突破した音声のみで話者照合をした結果であるt-DCF (tandem detection cost function)はASVspoof2019のevaluate_tDCF_asvspoof19.pyを変更しながら使用して評価を実施しました．メタデータで使われている各記号の意味やファイルの詳細は[J-SPAW2/README.md](https://github.com/takamichi-lab/j-spaw2/blob/main/README.md)に記載されています．
 
 ## 実験
 
