@@ -118,14 +118,14 @@ F001 F001_R1_E2_M3_s1_r1_e1_m1_AA R1 M3 E2 r1 m1 s1 e1 p1 v1 spoof notrim eval
 * `{sent_id}`：発話テキストID (AA--BX の 50 文)
 
 ### LA タスク
-<!-- ```sh
+```sh
 {spkr_id}_{room_id}_{env_id}_{LA_method_id}_{sent_id}.wav
 ```
 * `{spkr_id}`：話者ID (F001-F019, M001-M021 の 40 話者)
 * `{room_id}`：収録場所ID (実発話収録, R1--R4 の 4 場所)
 * `{env_id}`：収録環境ID (実発話収録, E1--E4 の 4 環境)
-* `{LA_method_id}`：音声合成手法 (L1--L2 の 2 種類)
-* `{sent_id}`：発話テキストID (BT--BX の 5 文) -->
+* `{LA_method_id}`：音声合成手法 (L3--L5 の 5 種類)
+* `{sent_id}`：発話テキストID (BT--BX の 5 文) 
 
 ### PA タスク
 ```sh
