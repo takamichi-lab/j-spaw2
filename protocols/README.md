@@ -68,24 +68,24 @@ CUDA_VISIBLE_DEVICES=0 python main_SSL_LA.py --track=LA --is_eval --eval --model
 CUDA_VISIBLE_DEVICES=0 python main_SSL_LA.py --track=LA --is_eval --eval --model_path='model_path' --eval_output='output.txt'
 ```
 
-### 評価
+#### 評価
 それぞれのモデルでスコアを出したテキストファイルを使用して評価を行います．[ASVspoof2021のeval-package](https://github.com/asvspoof-challenge/2021/tree/main/eval-package)を使用してEER，[ASVspoof2019](https://github.com/asvspoof-challenge/2021/tree/main/eval-package)を使用してtDCFを出すことができます．
 
-#### EER (ASVspoof2021のeval-package)
+### EER (ASVspoof2021のeval-package)
 2021/eval-package/keys/PA/CM/trial_metadata.txt等を変更し，以下のコマンドを用いて評価を行います．
 ```sh
 python main.py --cm-score-file score.txt --track PA --subset eval 
 ```
 
-#### tDCF (ASVspoof2019)
+### tDCF (ASVspoof2019)
 asvspoof2019/evaluate_tDCF_asvspoof19.pyのcm_score_file,asv_score_file等を変更し，以下のコマンドを用いて評価を行います．
 ```sh
 python evaluate_tDCF_asvspoof19.py
 ```
 
-### 実験結果
+#### 実験結果
 
-##UTMOS(LA)
+### UTMOS(LA)
 
 |  | 収録環境 | CosyVoice2 | ElevenLabs | VALL-E X |
 | :---: | :--- | :---: | :---: | :---: |
@@ -95,7 +95,7 @@ python evaluate_tDCF_asvspoof19.py
 | | 静かな屋外 (E4) | 2.90 | 2.68 | 2.17 |
 | | 全環境 | 2.32 | 2.20 | 1.85 |
 
-##なりすまし音声検出
+### なりすまし音声検出
 
 PA※
 | | | LFCC-GMM | AASIST | wav2vec2.0+AASIST |
@@ -122,7 +122,16 @@ LA
 | **t-DCF** | J-SPAW 全環境 | 0.45 | 0.99 | 0.41 |
 
 
-## 話者照合 (LAによるなりすまし音声を含む)の評価
+### 話者照合 (PAによるなりすまし音声を含む)の評価
+
+| 条件 | EER（%） |
+| -- | -- | 
+| 音量大, 遠距離 （p1_v1） | 23.95% |
+| 音量大, 遠距離 （p1_v2） | 20.54% |
+| 音量小, 近距離 （p2_v1） | 15.29% |
+| 音量小, 近距離 （p2_v2） | 9.80% |
+
+### 話者照合 (LAによるなりすまし音声を含む)の評価
 
 
 | 収録環境 | L3 | L4 | L5 |
@@ -132,13 +141,3 @@ LA
 | 音楽のある室内 (E3) | 12.94 | 27.56 | 7.00 |
 | 静かな屋外 (E4) | 15.56 | 31.50 | 3.50 |
 | 全環境 | 14.75 | 29.00 | 6.75 |
-
-
-## 話者照合 (PAによるなりすまし音声を含む)の評価
-
-| 条件 | EER（%） |
-| -- | -- | 
-| 音量大, 遠距離 （p1_v1） | 23.95% |
-| 音量大, 遠距離 （p1_v2） | 20.54% |
-| 音量小, 近距離 （p2_v1） | 15.29% |
-| 音量小, 近距離 （p2_v2） | 9.80% |
