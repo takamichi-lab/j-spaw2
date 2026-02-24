@@ -76,8 +76,9 @@ F001 F001_R1_E2_L1_BT - E2 L1 spoof notrim eval
 * `spoof`：正解ラベル
     * `bonafide`：実発話
     * `spoof`：なりすまし音声
-* `notrim`：非発話区間のトリミングの有無
-    * `notrim`：トリミングなし(本データベースではnotrimのみ)
+* `trim`,`notrim`：非発話区間のトリミングの有無
+    * `notrim`：トリミングなし
+    * `trim`：トリミングあり(Silero-VAD[4]による発話区間検出)
 * `eval`：サブセットの種類
     * `eval`：評価データ(本データベースではevalのみ)
 
