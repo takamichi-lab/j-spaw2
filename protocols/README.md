@@ -38,7 +38,7 @@ python trainECAPAModel.py --eval --initial_model exps/pretrain.model
 #### ASV (なりすまし音声無し)の評価
 EERの結果は1.69%です．
 
-### CM　（LFCC-GMM, AASIST, wav2vec2.0+AASISTの3種類のモデルで評価）
+### CM　
 #### PA (LFCC-GMM)
 事前学習済みモデルは[ここ](https://github.com/asvspoof-challenge/2021)からダウンロードできます．
 
@@ -56,6 +56,12 @@ python ./main.py --config ./config/AASIST_ASVspoof5.conf --eval
 ```
 
 #### PA (wav2vec2.0+AASIST)
+事前学習済みモデルは[ここ](https://github.com/TakHemlata/SSL_Anti-spoofing)からダウンロードできます．
+(SSL_Anti-spoofing/main_SSL_LA.pyのfile_eval.eval_set等を変更しながら使用し，以下のコマンドを用いて評価を行います．
+```sh
+CUDA_VISIBLE_DEVICES=0 python main_SSL_LA.py --track=LA --is_eval --eval --model_path='model_path' --eval_output='output.txt'
+```
+#### LA (wav2vec2.0+AASIST)
 事前学習済みモデルは[ここ](https://github.com/TakHemlata/SSL_Anti-spoofing)からダウンロードできます．
 (SSL_Anti-spoofing/main_SSL_LA.pyのfile_eval.eval_set等を変更しながら使用し，以下のコマンドを用いて評価を行います．
 ```sh
@@ -93,6 +99,8 @@ python evaluate_tDCF_asvspoof19.py
 
 
 ### ASV (LAによるなりすまし音声を含む)の評価
+
+
 
 ### ASV (PAによるなりすまし音声を含む)の評価
 
