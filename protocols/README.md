@@ -85,7 +85,7 @@ python evaluate_tDCF_asvspoof19.py
 
 ### 実験結果
 
-##UTMOS[4](LA)
+##UTMOS(LA)
 
 |  | 収録環境 | CosyVoice2 | ElevenLabs | VALL-E X |
 | :---: | :--- | :---: | :---: | :---: |
