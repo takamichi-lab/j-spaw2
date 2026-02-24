@@ -58,7 +58,7 @@ F001 F001_R1_E2_M3_s1_r1_e1_m1_AA R1 M3 E2 r1 m1 s1 e1 p1 v1 spoof notrim eval
   * `v1 - v2`: 再生音量ID
 
 ### LA タスク (metadata_LA.txt)
-<!-- ```sh
+```sh
 F001 F001_R1_E2_L1_BT - E2 L1 spoof notrim eval
 ```
 * `F001`：話者IDまたはなりすまし対象話者ID
@@ -70,15 +70,16 @@ F001 F001_R1_E2_L1_BT - E2 L1 spoof notrim eval
     * `E3`：背景音楽が流れている室内
     * `E4`：屋外
 * `L1`：音声合成手法
-    * `L1`：VALL-E X [1]
-    * `L2`：FastSpeech2 [2]
+    * `L3`：CosyVoice2 [1]
+    * `L4`：ElevenLabs [2]
+    * `L5`：VALL-E X [3]
 * `spoof`：正解ラベル
     * `bonafide`：実発話
     * `spoof`：なりすまし音声
 * `notrim`：非発話区間のトリミングの有無
     * `notrim`：トリミングなし(本データベースではnotrimのみ)
 * `eval`：サブセットの種類
-    * `eval`：評価データ(本データベースではevalのみ) -->
+    * `eval`：評価データ(本データベースではevalのみ)
 
 
 ### PAタスク (metadata_PA.txt)
