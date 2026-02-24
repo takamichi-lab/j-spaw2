@@ -102,7 +102,7 @@ python evaluate_tDCF_asvspoof19.py
 
 
 
-| 収録環境 | CosyVoice2 | ElevenLabs | VALL-E X |
+| 収録環境 | L3 | L4 | L5 |
 | :--- | :---: | :---: | :---: |
 | 静かな室内 (E1) | 15.56 | 32.00 | 10.50 |
 | 空調のある室内 (E2) | 13.94 | 27.56 | 2.88 |
