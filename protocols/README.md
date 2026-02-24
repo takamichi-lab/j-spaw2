@@ -87,7 +87,7 @@ python evaluate_tDCF_asvspoof19.py
 
 ##UTMOS[4](LA)
 
-| 評価指標 | 収録環境 | CosyVoice2 | ElevenLabs | VALL-E X |
+|  | 収録環境 | CosyVoice2 | ElevenLabs | VALL-E X |
 | :---: | :--- | :---: | :---: | :---: |
 | **UTMOS** | 静かな室内 (E1) | 2.56 | 2.47 | 2.08 |
 | | 空調のある室内 (E2) | 2.11 | 2.02 | 1.68 |
