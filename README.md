@@ -67,7 +67,7 @@ F001 F001_R1_E2_M3_s1_r1_e1_m1_AA R1 M3 E2 r1 m1 s1 e1 p1 v1 spoof notrim eval
 
 ### LA タスク (metadata_LA.txt)
 ```sh
-F001 F001_R1_E2_L1_BT _ _ _ _ _ E2 L1 spoof notrim eval
+F001 F001_R1_E2_L1_BT _  E2 L1 _ _ _ _ spoof notrim eval
 ```
 * `F001`：話者IDまたはなりすまし対象話者ID
 * `F001_R1_E2_L1_BT`：トライアルID
