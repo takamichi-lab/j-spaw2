@@ -40,7 +40,7 @@ EERの結果は1.69%です．
 
 ### CM　
 #### PA (LFCC-GMM)
-事前学習済みモデルは[ここ](https://github.com/asvspoof-challenge/2021)からダウンロードできます．
+事前学習済みモデルは配布されていないため、[ここ](https://github.com/asvspoof-challenge/2021)を参照して学習スクリプトを用いてモデルを作成してください．
 
 2021/PA/Baseline-LFCC-GMM/python/gmm_scoring_asvspoof21.pyのdict_file,db_folder,eval_folder,eval_ndx,audio_ext等を変更しながら使用してください．また，eval_foldeをリスト型にするなどして，2つのフォルダ（なりすまし音声用のPAのフォルダと実発話用のASVのフォルダ）をどちらも参照できるようにし，以下のコマンドを用いて評価を行います．
 ```sh
@@ -69,7 +69,7 @@ CUDA_VISIBLE_DEVICES=0 python main_SSL_LA.py --track=LA --is_eval --eval --model
 ```
 
 ### 評価
-それぞれのモデルでスコアを出したテキストファイルを使用して評価を行います．[ASVspoof2021のeval-package](https://github.com/asvspoof-challenge/2021/tree/main/eval-package)を使用してEER，[ASVspoof2019](https://github.com/asvspoof-challenge/2021/tree/main/eval-package)を使用してtDCFを出すことができます．
+それぞれのモデルでスコアを出したテキストファイルを使用して評価を行います．[ASVspoof2021のeval-package](https://github.com/asvspoof-challenge/2021/tree/main/eval-package)を使用してEER，[ASVspoof2019](https://github.com/nesl/asvspoof2019)を使用してtDCFを出すことができます．
 
 #### EER (ASVspoof2021のeval-package)
 2021/eval-package/keys/PA/CM/trial_metadata.txt等を変更し，以下のコマンドを用いて評価を行います．
@@ -78,7 +78,8 @@ python main.py --cm-score-file score.txt --track PA --subset eval
 ```
 
 #### tDCF (ASVspoof2019)
-asvspoof2019/evaluate_tDCF_asvspoof19.pyのcm_score_file,asv_score_file等を変更し，以下のコマンドを用いて評価を行います．
+asvspoof2019/evaluate_tDCF_asvspoof19.py変更し，評価します．
+cm_score_file,asv_score_file等の変更に加え．ASV EERの計算では，オリジナル実装の non-target 試行のみを用いる設定からspoof 試行も含めて評価するよう変更してください．変更には、ファイル名の形式・規則などの違いを利用してください．また，使用するCMモデルの出力形式に応じて，スコアファイルの読み込み方法やラベル判定処理なども適宜修正してください．以下のコマンドを用いて評価を行います．
 ```sh
 python evaluate_tDCF_asvspoof19.py
 ```
