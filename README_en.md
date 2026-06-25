@@ -1,4 +1,4 @@
-# J-SPAW2: A Japanese Speech Corpus for Analyzing Recording Conditions inReplay Attacks
+# J-SPAW2: A Japanese Speech Corpus for Analyzing Recording Conditions in Replay Attacks
 [日本語版はこちら](https://github.com/takamichi-lab/j-spaw2/blob/main/README.md)
 
 The J-SpAW2 (pronounced j-spou2) corpus is designed for speaker verification and anti-spoofing verification, containing both bona fide speech and spoofing attacks.
