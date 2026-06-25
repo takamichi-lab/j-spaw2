@@ -197,6 +197,8 @@ F001 F001_R1_E2_M3_s1_r1_e1_m1_AA R1 M3 E2 r1 m1 s1 e1 p1 v1 spoof notrim eval
 - Suzuka Horie, Shinnosuke Takamichi, Sayaka Shiota, "J-SPAW2: A Japanese Speech Corpus for Analyzing Recording Conditions in Replay Attacks", SPEASIP, 2026
 - Sawato Furubayashi, Shinnosuke Takamichi, Sayaka Shiota, "Spoofing attacks using deepfake speech synthesized from non-consensual recording", SPEASIP, 2026
 
+  ※ The PA (Playback Attack) component of J-SPAW2 is primarily reported by Horie et al. (2026), and the LA (Synthetic Speech Attack) component by Furubayashi et al. (2026).
+
 ## References
 [1] Z. Du, Y. Wang, Q. Chen, X. Shi, X. Lv, T. Zhao, Z. Gao, Y. Yang, C. Gao, H. Wang, et al., “CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models,” in Proc. CoRR, 2024.
 
