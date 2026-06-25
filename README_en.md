@@ -46,7 +46,7 @@ This repository provides a set of speech files, lists for evaluating speaker ver
 * `F001_R1_E2_M2_BT.wav`：Enrollment speech
 * `F001_R1_E2_M2_BU.wav`：Test speech
 
-### ASV タスク (ASV_PA_eval.txt)
+### ASV Task (ASV_PA_eval.txt)
 ```sh
 F001 F001_R1_E2_M3_s1_r1_e1_m1_AA R1 M3 E2 r1 m1 s1 e1 p1 v1 spoof notrim eval
 ```
@@ -89,98 +89,117 @@ F001 F001_R1_E2_L1_BT _  E2 L1 _ _ _ _ spoof notrim eval
 * `eval`: Subset type
   * `eval`: Evaluation data (only eval is used in this database)
 
-### PAタスク (metadata_PA.txt)
+### PA Task (metadata_PA.txt)
 ```sh
 F001 F001_R1_E2_M3_s1_r1_e1_m1_AA R1 M3 E2 r1 m1 s1 e1 p1 v1 spoof notrim eval
 ```
-* `F001`：話者IDまたはなりすまし対象話者ID
-* `F001_R1_E2_M3_s1_r1_e1_m1_AA`：トライアルID
-* なりすまし対象話者の実発話収録
-  * `R1 - R4`：収録場所ID
-  * `M1 - M3`：収録機器ID
-  * `E1 - E4`：収録環境ID
-* 攻撃者によるなりすまし音声収録
-  * `r1 - r4`：収録場所ID
-  * `m1 - m3`：収録機器ID
-  * `s1 - s4`：再生機器ID
-  * `e1 - e4`：収録環境ID
-  * `p1 - p2`: 再生距離ID
-  * `v1 - v2`: 再生音量ID
-* `spoof`：正解ラベル
-    * `bonafide`：実発話
-    * `spoof`：なりすまし音声
-* `notrim`：非発話区間のトリミングの有無
-    * `notrim`：トリミングなし(本データベースではnotrimのみ)
-* `eval`：サブセットの種類
-    * `eval`：評価データ(本データベースではevalのみ)
+* `F001`: Speaker ID or target speaker ID
+* `F001_R1_E2_M3_s1_r1_e1_m1_AA`: Trial ID
+* Bona fide speech recording of the target speaker
+  * `R1 - R4`: Recording room ID
+  * `M1 - M3`: Recording microphone ID
+  * `E1 - E4`: Recording environment ID
+* Spoofed speech recording by the attacker
+  * `r1 - r4`: Recording room ID
+  * `m1 - m3`: Recording microphone ID
+  * `s1 - s4`: Playback loudspeaker ID
+  * `e1 - e4`: Recording environment ID
+  * `p1 - p2`: Playback distance ID
+  * `v1 - v2`: Playback volume ID
+* `spoof`: Correct label
+    * `bonafide`: Bona fide speech
+    * `spoof`: Spoofed speech
+* `notrim`: Whether non-speech segments are trimmed
+    * `notrim`: No trimming (only `notrim` is used in this database)
+* `eval`: Subset type
+    * `eval`: Evaluation data (only `eval` is used in this database)
 
-## 音声ファイルの命名規則
-### ASV タスク
+## Naming Format for Speech Files
+### ASV Task
 ```sh
 {spkr_id}_{room_id}_{env_id}_{mic_id}_{sent_id}.wav
 ```
-* `{spkr_id}`：話者ID (F001--F019, M001--M021 の 40 話者)
-* `{room_id}`：収録場所ID (実発話収録, R1--R4 の 4 場所)
-* `{env_id}`：収録環境ID (実発話収録, E1--E4 の 4 環境)
-* `{mic_id}`：収録機器ID (実発話収録, M1--M3 の 3 種類)
-* `{sent_id}`：発話テキストID (AA--BX の 50 文)
+* `{spkr_id}`: Speaker ID (40 speakers: F001--F019, M001--M021)
+* `{room_id}`: Recording room ID (for bona fide speech, R1--R4)
+* `{env_id}`: Recording environment ID (for bona fide speech, E1--E4)
+* `{mic_id}`: Recording microphone ID (for bona fide speech, M1--M3)
+* `{sent_id}`: Sentence ID (50 sentences: AA--BX)
 
-### LA タスク
+
+### LA Task
 ```sh
 {spkr_id}_{room_id}_{env_id}_{LA_method_id}_{sent_id}.wav
 ```
-* `{spkr_id}`：話者ID (F001-F019, M001-M021 の 40 話者)
-* `{room_id}`：収録場所ID (実発話収録, R1--R4 の 4 場所)
-* `{env_id}`：収録環境ID (実発話収録, E1--E4 の 4 環境)
-* `{LA_method_id}`：音声合成手法 (L3--L5 の 5 種類)
-* `{sent_id}`：発話テキストID (BT--BX の 5 文) 
+* `{spkr_id}`: Speaker ID (40 speakers: F001-F019, M001-M021)
+* `{room_id}`: Recording room ID (for bona fide speech, R1--R4)
+* `{env_id}`: Recording environment ID (for bona fide speech, E1--E4)
+* `{LA_method_id}`: Speech synthesis method (5 types: L3--L5)
+* `{sent_id}`: Sentence ID (5 sentences: BT--BX)
 
-### PA タスク
+### PA Task
 ```sh
 {spkr_id}_{room_id}_{env_id}_{mic_id}_{loudspeaker_id}_{room_id_replay}_{env_id_replay}_{mic_id_replay}_{pos_id_replay}_{vol_id_replay}_{sent_id}.wav
 ```
-* なりすまし対象話者の実発話収録
-    * `{spkr_id}`：話者ID (F001--F019, M001--M021 の 40 話者)
-    * `{room_id}`：収録場所ID (実発話収録, R1--R4 の 4 場所)
-    * `{env_id}`：収録環境ID (実発話収録, E1--E4 の 4 環境)
-    * `{mic_id}`：収録機器ID (実発話収録, M1--M3 の 3 種類)
-* 攻撃者によるなりすまし音声収録
-    * `{loudspeaker_id}`：再生機器ID (再収録, s1--s4 の 4 種類)
-    * `{room_id_replay}`：収録場所ID (再収録, r1 のみ)
-    * `{env_id_replay}`：収録環境ID (再収録, e1--e3 の 3 種類)
-    * `{mic_id_replay}`：収録機器ID (再収録, m1--m2 の 2 種類)
-    * `{pos_id_replay}`: 再生距離ID (再収録, p1--p2 の 2 種類)
-  * `{vol_id_replay}`: 再生音量ID (再収録, v1--v2 の 2 種類)
+* Bona fide speech recording of the target speaker
+    * `{spkr_id}`: Speaker ID (40 speakers: F001--F019, M001--M021)
+    * `{room_id}`: Recording room ID (for bona fide speech, R1--R4)
+    * `{env_id}`: Recording environment ID (for bona fide speech, E1--E4)
+    * `{mic_id}`: Recording microphone ID (for bona fide speech, M1--M3)
+* Spoofed speech recording by the attacker
+    * `{loudspeaker_id}`: Playback loudspeaker ID (for re-recording, 4 types: s1--s4)
+    * `{room_id_replay}`: Recording room ID (for re-recording, only r1)
+    * `{env_id_replay}`: Recording environment ID (for re-recording, 3 types: e1--e3)
+    * `{mic_id_replay}`: Recording microphone ID (for re-recording, 2 types: m1--m2)
+    * `{pos_id_replay}`: Playback distance ID (for re-recording, 2 types: p1--p2)
+  * `{vol_id_replay}`: Playback volume ID (for re-recording, 2 types: v1--v2)
   * `{sent_id}`: Sentence ID (25 sentences: AA--AY)
-    * `{sent_id}`：発話テキストID (AA--AY の 25 文)
 
-## タスク共通の詳細
-* 収録場所ID：縦 (m) x 横 (m) x 高さ (m)
-    * `R1`：4.4 x 7.4 x 2.5 
-    * `r1`：11.0 x 8.0 x 2.6
-    * `R2,r2`：屋外1
-    * `R3,r3`：10.8 x 2.0 x 2.8
-    * `R4,r4`：屋外2
-* 収録機器ID：
-    * `M1,m1`：Pixel3
-    * `M2,m2`：iPhone8 
-    * `M3,m3`：iPad mini (第5世代)
-* 収録環境ID：
-    * `E1,e1`：静かな室内
-    * `E2,e2`：空調が動作している室内
-    * `E3,e3`：音楽が流れている室内
-    * `E4`：屋外
-* 再生機器ID：
-    * `s1`：Bose Soundlink Micro Bluetooth Speaker Bundle
-    * `s2`：iPad mini (第5世代)
-    * `s3`：MacBook Pro (13インチ, M2, 2022)
-    * `s4`：Sony SRS-ZR7
-* 再生距離ID:
-  * `p1`:近距離 (約 10 cm)
-  * `p2`:遠距離 (約 1m)
-* 再生音量ID:
-  * `v1`:音量大
-  * `v2`:音量小
 
-## ライセンス
-- 非商用利用に限る
+## Common Details Across Tasks
+* Recording room ID: Dimensions (length (m) x width (m) x height (m))
+    * `R1`: 4.4 x 7.4 x 2.5 
+    * `r1`: 11.0 x 8.0 x 2.6
+    * `R2,r2`: Outdoor 1
+    * `R3,r3`: 10.8 x 2.0 x 2.8
+    * `R4,r4`: Outdoor 2
+* Recording microphone ID:
+    * `M1,m1`: Pixel3
+    * `M2,m2`: iPhone8 
+    * `M3,m3`: iPad mini (5th generation)
+* Recording environment ID:
+    * `E1,e1`: Quiet indoor
+    * `E2,e2`: Indoor with air conditioning
+    * `E3,e3`: Indoor with music
+    * `E4`: Outdoor
+* Playback loudspeaker ID:
+    * `s1`: Bose Soundlink Micro Bluetooth Speaker Bundle
+    * `s2`: iPad mini (5th generation)
+    * `s3`: MacBook Pro (13-inch, M2, 2022)
+    * `s4`: Sony SRS-ZR7
+* Playback distance ID:
+  * `p1`: Close distance (approx. 10 cm)
+  * `p2`: Far distance (approx. 1 m)
+* Playback volume ID:
+  * `v1`: Loud volume
+  * `v2`: Low volume
+
+## License
+- For non-commercial use only
+
+
+## Authors
+- Suzuka Horie (Tokyo Metropolitan University)
+- Sawato Furubayashi (Tokyo Metropolitan University)
+- Shinnosuke Takamichi (Keio University)
+- Sayaka Shiota (Tokyo Metropolitan University)
+
+## Papers
+- Suzuka Horie, Shinnosuke Takamichi, Sayaka Shiota, "J-SPAW2: A Japanese Speech Corpus for Analyzing Recording Conditions in Replay Attacks", SPEASIP, 2026
+- Sawato Furubayashi, Shinnosuke Takamichi, Sayaka Shiota, "Spoofing attacks using deepfake speech synthesized from non-consensual recording", SPEASIP, 2026
+
+## References
+[1] Z. Du, Y. Wang, Q. Chen, X. Shi, X. Lv, T. Zhao, Z. Gao, Y. Yang, C. Gao, H. Wang, et al., “CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models,” in Proc. CoRR, 2024.
+
+[2] https://elevenlabs.io//.
+
+[3] Ziqiang Zhang, Long Zhou, et al, ”speak foreign languages with your own voice: Cross-lingual neural codec language modeling,” arXiv:2303.03936(2023)
