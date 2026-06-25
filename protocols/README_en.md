@@ -130,10 +130,10 @@ LA
 
 | Condition | EER (%) |
 | -- | -- | 
-| Loud volume, Far distance (p1_v1) | 23.95% |
-| Loud volume, Far distance (p1_v2) | 20.54% |
-| Low volume, Close distance (p2_v1) | 15.29% |
-| Low volume, Close distance (p2_v2) | 9.80% |
+| Loud volume, Far distance (p1_v1) | 23.95 |
+| Loud volume, Far distance (p1_v2) | 20.54 |
+| Low volume, Close distance (p2_v1) | 15.29 |
+| Low volume, Close distance (p2_v2) | 9.80 |
 
 ### Evaluation of ASV (includes LA spoofed speech)
 
