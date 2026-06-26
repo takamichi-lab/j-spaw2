@@ -30,7 +30,7 @@ This repository provides a set of speech files, lists for evaluating speaker ver
         - `cm/`
             - `L{3,4,5}_CM,txt`: Spoofing detection score list for calculating tDCF (LA)
     - `config.py`：Configuration file to apply the ASVspoof2021 eval-package to this database
-    - `README_protocols`：[https://github.com/takamichi-lab/j-spaw2/protocols/README.md](https://github.com/takamichi-lab/j-spaw2/blob/main/protocols/README.md)
+    - `README_protocols`：[https://github.com/takamichi-lab/j-spaw2/protocols/README_en.md](https://github.com/takamichi-lab/j-spaw2/blob/main/protocols/README_en.md)
 
  ## Metadata
 `metadata_LA.txt` and `metadata_PA.txt` follow the metadata format of [ASVspoof2021](https://www.asvspoof.org/index2021.html)．Using these, you can evaluate EER (equal error rate) and [t-DCF](https://arxiv.org/abs/1804.09618) (tandem detection cost function) with the ASVspoof2021  [eval-package](https://github.com/asvspoof-challenge/2021/tree/main/eval-package) To evaluate EER and t-DCF for each environment in J-SpAW, replace the ASVspoof2021 [config.py](https://github.com/asvspoof-challenge/2021/blob/main/eval-package/config.py) with the one included in this package. The meanings of the symbols used in the metadata are as follows:
