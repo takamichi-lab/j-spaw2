@@ -4,7 +4,7 @@
 The J-SpAW2 (pronounced j-spou2) corpus is designed for speaker verification and anti-spoofing verification, containing both bona fide speech and spoofing attacks.
 
 ## Download speech files
-[Link](https://tmpuc.box.com/s/nwlq5wwposnbwx0oxp6bwvjxi003kenr) (zip, 9.0 GB)
+[Link](https://tmpuc.ent.box.com/file/2427356115617?sb=/activity) (zip, 9.1 GB)
 
 ## Contents
 This repository provides a set of speech files, lists for evaluating speaker verification (ASV), and various protocols including lists and metadata for evaluating logical attack (LA) and physical attack (PA) tasks in spoofing detection. The contents are as follows:
